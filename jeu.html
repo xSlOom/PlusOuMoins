@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html" charset="utf-12" />
+        <title>Plus ou moins!</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+		<link rel='stylesheet prefetch' href='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css'>
+		<link rel='stylesheet prefetch' href='//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css'>
+		<link href="jeu.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-3 game-wrap">
+					<h2 class="text-center">Plus ou Moins?</h2>
+					<h4 class="text-center">Tu dois devenir le nombre entre 1 et 100</h4>
+					<div class="col-md-12">
+						<div class="input-group">
+							<input type="text" class="form-control input-lg" id="number" placeholder="Entrez un nombre 1 et 100">
+							<span class="input-group-btn">
+								<button class="btn btn-default btn-lg" id="valid" type="button">Valider</button>
+							</span>
+						</div><!-- /input-group -->
+						<h3 id="message" class="text-center"></h3>
+						<h3 id="essai" class="attempts text-center"></h3>
+					</div><!-- /.col-lg-6 -->
+				</div>
+			</div>
+			<a href="//codepen.io/TeshaR/pen/weFIa" style="text-decoration: none; color: white;">Original design</a>
+		</div>
+        <script src="jeu.js" type="text/javascript" charset="utf-8"></script>
+    </body>
+</html>
