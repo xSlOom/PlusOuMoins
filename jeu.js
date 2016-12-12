@@ -5,7 +5,7 @@ function endGame(nombre, essais) { // montrer le message de victoire
 function launchGame() { // lancer le jeu
     
     var saisie;
-	var nombres	= [];
+    var nombres	= [];
     var nombre  = Math.floor(1 + (100 - 1 + 1) * Math.random());
     var essais  = 0;
     var indice  = false;
