@@ -18,26 +18,26 @@ function launchGame() { // lancer le jeu
                 document.getElementById("message").innerHTML = "Tu en baves? Un petit indice ! Le nombre commence par " + nombre.toString().substr(0, 1);
                 indice  = true;
             } else {
-				if (essais == 10) { // si le nombre d'essais est 10, on arrête le jeu.
-					document.getElementById("message").innerHTML    = "Vous avez perdu ! Le nombre à deviner était " + nombre + ".";
-					document.getElementById("valid").disabled   	= true;
-				} else {
-					if (nombres.indexOf(saisie) != -1) { // si on a trouvé le nombre dans le tableau; 
-						document.getElementById("message").innerHTML    = "Vous avez déjà dit ce nombre!";
-					}
-					else if (saisie > nombre) { // si la saisie est plus grande que le nombre tiré au hasard
-						essais++;
-						nombres.push(saisie);
-						document.getElementById("message").innerHTML    =   "C'est moins que ce que tu crois!";
-					} 
-					else if (saisie < nombre) { // si la saisie est plus petite que le nombre tiré au hasard
-						essais++;
-						nombres.push(saisie);
-						document.getElementById("message").innerHTML    =   "C'est plus que ce que tu crois!";
-					} else { // l'utilisateur a trouvé la bonne réponse, donc fin du jeu et affichage du message de victoire.
-						end = true;
-					}   
-				}
+		if (essais == 10) { // si le nombre d'essais est 10, on arrête le jeu.
+			document.getElementById("message").innerHTML    = "Vous avez perdu ! Le nombre à deviner était " + nombre + ".";
+			document.getElementById("valid").disabled   	= true;
+		} else {
+			if (nombres.indexOf(saisie) != -1) { // si on a trouvé le nombre dans le tableau; 
+				document.getElementById("message").innerHTML    = "Vous avez déjà dit ce nombre!";
+			}
+			else if (saisie > nombre) { // si la saisie est plus grande que le nombre tiré au hasard
+				essais++;
+				nombres.push(saisie);
+				document.getElementById("message").innerHTML    =   "C'est moins que ce que tu crois!";
+			} 
+			else if (saisie < nombre) { // si la saisie est plus petite que le nombre tiré au hasard
+				essais++;
+				nombres.push(saisie);
+				document.getElementById("message").innerHTML    =   "C'est plus que ce que tu crois!";
+			} else { // l'utilisateur a trouvé la bonne réponse, donc fin du jeu et affichage du message de victoire.
+				end = true;
+			}   
+		}
             }
         } else {
             document.getElementById("message").innerHTML    =   "Le nombre doit être numérique seulement.";
