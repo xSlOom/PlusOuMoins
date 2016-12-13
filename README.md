@@ -2,14 +2,9 @@
 
 Voici une version basic du jeu "Plus ou Moins".
 
-Par défaut, vous devez deviner entre 1 et 100 mais vous pouvez changer ces valeurs dans le fichier JS. 
+Par défaut, vous devez deviner entre 1 et 100 mais vous pouvez changer ces valeurs dans le fichier JS sur la ligne suivante :
 
-/* 
-  1: Min
-  100 : Max
-*/
-
-var nombre  = Math.floor(1 + (100 - 1 + 1) * Math.random());
+var nombre  = Math.floor(1 + (100 - 1 + 1) * Math.random()); // 1 : minimum; 100: maximum;
 
 Lorsque vous avez fait 5 essais sans avoir trouvé le nombre correcte, un indice va apparaitre avec le premier chiffre du nombre et si vous faites + de 10 essais, vous perdez la partie.
 
