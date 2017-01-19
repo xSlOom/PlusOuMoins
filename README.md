@@ -9,6 +9,7 @@ var nombre  = Math.floor(1 + (100 - 1 + 1) * Math.random()); // 1 : minimum; 100
 ```
 When you do 5 tries without finding the corrct number, a clue will appear with the first digit of the number and if you do more than 10 tries, the game is over.
 
-Une liste dynamique a été ajouté pour afficher la liste des nombres que vous avez déjà entré. Si vous avez déjà entré un nombre, vous aurez automatiquement une erreur mais cela ne comptera pas comme un "essai".
+A dynamic list has been added to list all numbers you have submitted. If you have already enter a number, you will have automatically an error but it doesn't count as a "try".
 
-Si il y a des bugs/erreurs, n'hésitez pas à les signaler! Cela pourrait m'aider à réparer mes propres erreurs.
+<h1>Bugs ? Questions ?</h1>
+Feel free to open an issue if there are bugs or if you have an question about to improving my code.
