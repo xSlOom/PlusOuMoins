@@ -22,7 +22,7 @@ function launchGame() { // run the game
 			document.getElementById("message").innerHTML    = "You lose! The number was " + nombre + ".";
 			document.getElementById("valid").disabled   	= true;
 		} else {
-			if (nombres.indexOf(saisie) != -1) { // si on a trouvé le nombre dans le tableau; 
+			if (nombres.indexOf(saisie) != -1) { // if we have found the number in the array
 				document.getElementById("message").innerHTML    = "You have already said that number.";
 			}
 			else if (saisie > nombre) { // if the number is more than the answer
