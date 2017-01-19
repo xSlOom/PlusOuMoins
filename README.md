@@ -1,10 +1,12 @@
-# PlusOuMoins
+<h1>More or Less</h1>
 
-Voici une version basic du jeu "Plus ou Moins".
+<em>This is a basic version of the "More or less" game where you have to guess the number!</em>
 
-Par défaut, vous devez deviner entre 1 et 100 mais vous pouvez changer ces valeurs dans le fichier JS sur la ligne suivante :
+By default, you have to guess the number between 1 and 100 but you can change those valeurs in the JS file.
 
+```
 var nombre  = Math.floor(1 + (100 - 1 + 1) * Math.random()); // 1 : minimum; 100: maximum;
+```
 
 Lorsque vous avez fait 5 essais sans avoir trouvé le nombre correcte, un indice va apparaitre avec le premier chiffre du nombre et si vous faites + de 10 essais, vous perdez la partie.
 
