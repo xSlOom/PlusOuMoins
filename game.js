@@ -1,8 +1,8 @@
-function endGame(nombre, essais) { // montrer le message de victoire
-    document.getElementById("message").innerHTML    =   "Bravo, le nombre &eacute;tait " + nombre + ". Tu as complet&eacute; le jeu en " + essais + " essais.";
+function endGame(nombre, essais) { // show the victory message
+    document.getElementById("message").innerHTML    =   "Congratulations, the number was " + nombre + ". You have completed the game in " + essais + " tries.";
 }
 
-function launchGame() { // lancer le jeu
+function launchGame() { // run the game
     
     var saisie;
     var nombres	= [];
@@ -14,35 +14,35 @@ function launchGame() { // lancer le jeu
     document.getElementById("valid").addEventListener("click", function() {
         saisie  = parseInt(document.getElementById("number").value);
         if (isNaN(saisie) == false) {
-            if ((essais > 5) && (indice == false) && (saisie !== 0)) { // un petit indice seulement si c'est pas égale à la valeur initial (0)
-                document.getElementById("message").innerHTML = "Tu en baves? Un petit indice ! Le nombre commence par " + nombre.toString().substr(0, 1);
+            if ((essais > 5) && (indice == false) && (saisie !== 0)) { // a little clue :)
+                document.getElementById("message").innerHTML = "You drool? A little clue! The number starts with " + nombre.toString().substr(0, 1);
                 indice  = true;
             } else {
-		if (essais == 10) { // si le nombre d'essais est 10, on arrête le jeu.
-			document.getElementById("message").innerHTML    = "Vous avez perdu ! Le nombre à deviner était " + nombre + ".";
+		if (essais == 10) { // if the number of tries is 10, the game is over
+			document.getElementById("message").innerHTML    = "You lose! The number was " + nombre + ".";
 			document.getElementById("valid").disabled   	= true;
 		} else {
 			if (nombres.indexOf(saisie) != -1) { // si on a trouvé le nombre dans le tableau; 
-				document.getElementById("message").innerHTML    = "Vous avez déjà dit ce nombre!";
+				document.getElementById("message").innerHTML    = "You have already said that number.";
 			}
-			else if (saisie > nombre) { // si la saisie est plus grande que le nombre tiré au hasard
+			else if (saisie > nombre) { // if the number is more than the answer
 				essais++;
 				nombres.push(saisie);
-				document.getElementById("message").innerHTML    =   "C'est moins que ce que tu crois!";
+				document.getElementById("message").innerHTML    =   "It's less than what you think.";
 			} 
-			else if (saisie < nombre) { // si la saisie est plus petite que le nombre tiré au hasard
+			else if (saisie < nombre) { // if the number is less than the answer
 				essais++;
 				nombres.push(saisie);
-				document.getElementById("message").innerHTML    =   "C'est plus que ce que tu crois!";
-			} else { // l'utilisateur a trouvé la bonne réponse, donc fin du jeu et affichage du message de victoire.
+				document.getElementById("message").innerHTML    =   "It's more than what you think.";
+			} else { // User found the correct answer, so game is over and we show the victory message.
 				end = true;
 			}   
 		}
             }
         } else {
-            document.getElementById("message").innerHTML    =   "Le nombre doit être numérique seulement.";
+            document.getElementById("message").innerHTML    =   "Number must be numeric.";
         }
-		document.getElementById("essai").innerHTML	= "Nombre(s) utilisé(s) : " + (nombres.length == 0 ? "Aucun" : nombres.join(", ")) + " | Nombre d'essais : " + essais + "/10";
+		document.getElementById("essai").innerHTML	= "Used numbers : " + (nombres.length == 0 ? "Aucun" : nombres.join(", ")) + " | Trie(s) : " + essais + "/10";
         if (end == true) { // si le joueur a trouvé le nombre, on désactive le bouton et on affiche le message de victoire
             document.getElementById("valid").disabled   = true;
             endGame(nombre, essais);    
@@ -50,6 +50,6 @@ function launchGame() { // lancer le jeu
     });
 }
 
-document.addEventListener("DOMContentLoaded", function(){ // le document est prêt donc on peut démarrer le jeu! c:
-    launchGame(); // appeler la fonction pour jouer le jeu
+document.addEventListener("DOMContentLoaded", function(){ // document is ready so we can start the game
+    launchGame(); // call the function to play the game
 });
